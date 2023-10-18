@@ -19,3 +19,5 @@ age = input("Escribe tu edad:")
 # Primer metodo
 age=int(age)
 print(f"Tu edad es {age} y es de tipo",type(age))
+
+
