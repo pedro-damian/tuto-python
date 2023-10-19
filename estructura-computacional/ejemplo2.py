@@ -8,9 +8,6 @@ nom = ""
 cp = False
 cant = 0
 subtotal = 0
-""" vale = False """
-""" vales = [["V1", 0.05],["V2", 0.1],["V3",0.2],["V4", 0.3],["V5", 1]] """
-""" dsct = 0 """
 total = 0
 cv = False
 print("Bienvenido:)")
@@ -44,16 +41,35 @@ if opt == "y":
             if opt == "y":
                 for f in productos:
                     stock = f[3]
-                    subtotal = precio * cant
+                    precio = f[2]
+                    
                     while True:
                         cant = int(input("Ingrese cantidad a comprar:")) 
                         if cant > stock:
                             print(f"Stock NO DISPONIBLE la cantidad disponible es: {stock}")
                         else:
-                            opt = input("Presiope \"d\" para obtener el subtotal\nPresione otra tecla para cancelar:")
-                            
-                if opt == "d":
-                    print("\------------------------------")
-                    print(f"Subtotal: {subtotal}")
-                    print("\------------------------------")
+                            opt = input("Presione \"y\" para obtener el subtotal. Presione otra tecla para cancelar:")
+                            cv = True
+                            break
+                 
+                    if opt == "y":
+                        subtotal = precio * cant
+                        print("\------------------------------")
+                        print(f"Subtotal: {subtotal}")
+                        print("\------------------------------")
                         
+                    if cv:
+                        boleta = input("¿Desea imprimir una boleta (Si = \"y\"/No = \"Otra tecla\")?")
+                        
+                    if boleta == "y":
+                        total = subtotal
+                        print("\n******BOLETA******\n")                                
+                        print(f"Cliente: {nom}")
+                        print(f"Cantidad: {cant}")
+                        print(f"Subtotal: {subtotal}")
+                        print(f"Total: {total}")
+                    else:
+                        break
+                    
+            else:
+                break
