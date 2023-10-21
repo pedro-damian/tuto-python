@@ -1,5 +1,6 @@
 
 user = input("Elige piedra, papel o tijera => ")
+user = user.lower()
 computer = "papel"
 
 if user == computer:
