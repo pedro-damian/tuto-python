@@ -18,9 +18,10 @@ print(lista[4])  # Imprimirá "plátano"
 
 
 # SLICING
+print("Imprimira toda la cadena =>", cadena[:])
 print("Imprimira de la posicion 0 a 5 =>", cadena[0:5])
 print("Imprimira de la posicion 5 a 9 =>", cadena[5:9])
-print("Imprimira de la posicion 0 hasta el final de la cadena =>", cadena[:10])
+print("Imprimira de la posicion inicial a 9 de la cadena =>", cadena[:10])
 print("Imprimira de la posicion 3 hasta el final de la cadena =>",cadena[3:])
 print("Imprimira de la posicion 2 hasta el final de la cadena saltandose 2 caracteres =>",cadena[2:10:2])
 print("Imprimira de la posicion 2 hasta el final de la cadena saltandose 3 caracteres =>",cadena[2:10:3])
