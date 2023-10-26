@@ -1,24 +1,34 @@
 
-aulas = {}
-n = int(input("Ingrese la cantidad de aulas: "))
-for i in range(1, n + 1):
-    aula = input(f"Ingrese el nombre del aula {i}: ")
-    m = int(input(f"Ingrese la cantidad de estudiantes en el aula {aula}: "))
-    estudiantes = []
-    for j in range(1, m + 1):
-        apellido = input(f"Ingrese el apellido del estudiante {j} del aula {aula}: ")
-        nota_final = float(input(f"Ingrese la nota final del estudiante {j} del aula {aula}: "))
-        estudiantes.append((apellido, nota_final))
-    aulas[aula] = estudiantes
+# solicita al usuario el numero de aulas
+n_aulas = int(input("Ingrese el número de aulas: "))
 
-for aula, estudiantes in aulas.items():
-    sum_notas = 0
-    max_nota = float('-inf')
-    max_apellido = ""
-    for estudiante in estudiantes:
-        sum_notas += estudiante[1]
-        if estudiante[1] > max_nota:
-            max_nota = estudiante[1]
-            max_apellido = estudiante[0]
-    promedio = sum_notas / len(estudiantes)
-    print(f"En el aula {aula}, el mejor estudiante es: {max_apellido} y el promedio general es: {promedio:.2f}")
+# bucle que va iterar con cada numero de aula ingresado 
+for a in range(n_aulas):
+    # se crea la variable aula que almacenara la seccion del aula
+    aula = input(f"Ingrese la seccion del aula {a+1}: ")
+    # solicita al usuario el numero de estudiantes del aula
+    n_estudiantes = int(input(f"Ingrese el número de estudiantes en el aula {aula}: "))
+    
+    # se crea 2 listas vacias que almacenaran apellidos y notas
+    apellidos = []
+    notas = []
+
+    # bucle que va iterar por cada estudiante en el aula
+    for e in range(n_estudiantes):
+        # solicita al usuario que ingrese el apellido del alumno
+        apellido = input(f"Ingrese el apellido del estudiante {e+1}: ")
+        # solicita que ingrese la nota final del estudiante
+        nota_final = int(input(f"Ingrese la nota final del estudiante {e+1}: "))
+        
+        # los datos de apellidos y notas finales se agregaran a las lista apellidos y notas respectivamente
+        apellidos.append(apellido)
+        notas.append(nota_final)
+
+    # Calcula el promedio de las notas utilizando la funcion sum (sumara todas las notas) entre la funcion len (cantidad de elementos en la lista)
+    promedio = sum(notas) / len(notas)
+    # Encuentrar al estudiante con la nota más alta por el metodo index y la funcion max
+    indice_mejor_estudiante = notas.index(max(notas))
+    # Usa el índice para encontrar el apellido del estudiante con la nota más alta
+    mejor_estudiante = apellidos[indice_mejor_estudiante]
+
+    print(f"En el aula {aula}, el mejor estudiante es {mejor_estudiante} y el promedio general del aula es {promedio:.2f}")

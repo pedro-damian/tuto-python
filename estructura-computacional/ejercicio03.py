@@ -6,6 +6,7 @@ s_menor_700 = 0
 s_700_1300 = 0
 s_mayor_1300 = 0
 
+# bucle que va iterar por cada empleado de la empresa
 for i in range(cantidad_empleados):
     horas = float(input(f"Ingrese las horas trabajadas por el empleado {i+1}: "))
     sueldo = horas * tarifa
