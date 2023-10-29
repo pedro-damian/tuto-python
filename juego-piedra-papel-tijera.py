@@ -1,7 +1,16 @@
+# importa un modulo random que se utiliza ´para generar numeros aleatorios
+import random
 
-user = input("Elige piedra, papel o tijera => ")
-user = user.lower()
-computer = "papel"
+# se crea una tupla con las 3 opciones
+options = ("papel","tijera","piedra")
+
+user = input("Elige piedra, papel o tijera => ").lower()
+#user = user.lower()
+# Aqui la variable computer tendra un valor aleatorio escogido de la tupla options
+computer = random.choice(options)
+
+print("La eleccion de user es:",user)
+print("La eleccion de computer es:",computer)
 
 if user == computer:
   print("Empate!!")

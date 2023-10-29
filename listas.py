@@ -1,5 +1,5 @@
 
-# LISTAS
+# ----------------------------------------------LISTAS [ ] ----------------------------------------------
 # las listas se pueden crear con corchetes "[ ]"
 # los elementos de una lista estan indexados esto quiere decir que tienen un orden donde siempre empieza de cero
 nombres = ["pedro", "maria", "jose", "miguel", "raul"]
