@@ -1,3 +1,8 @@
+# Un supermercado ha recopilado los datos de N productos, para esto se ingresan en un proceso repetitivo: el tipo (comida, vestido), la procedencia (Nacional, Importado) y el precio de cada producto. Construya un programa que permita mostrar:
+# a) EI mayor precio pagado por un producto Nacional.
+# b) EI menor precio pagado por un producto Importado.
+# c) La ganancia total de dinero en comida y la ganancia total de dinero en vestido.
+
 
 # solicita al usuario un numero de productos
 productos = int(input("Ingrese el número de productos: "))

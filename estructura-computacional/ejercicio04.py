@@ -1,4 +1,10 @@
-  
+# Una empresa almacena los datos de N empleados, para esto, en un proceso repetitivo se ingresa el sexo y el salario de cada empleado. Se pide mostrar:
+# a) Cuántas mujeres y cuántos varones que trabajan en esa empresa.
+# b) EI porcentaje de mujeres que ganan menos de 800 soles.
+# c) EI nombre del empleado varón que gana el mayor sueldo.
+
+
+
 # solicita al usuario el numero de empleados
 empleados = int(input("Ingrese el número de empleados: "))
 

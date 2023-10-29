@@ -1,3 +1,6 @@
+# Se registran las N aulas de la sección secundaria de un centro educativo, y por cada sección se registran las notas finales de sus M alumnos. Elaborar un programa que muestre el apellido del mejor alumno de cada aula y el promedio general de la misma aula.
+
+
 
 # solicita al usuario el numero de aulas
 n_aulas = int(input("Ingrese el número de aulas: "))

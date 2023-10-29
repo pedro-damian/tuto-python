@@ -1,3 +1,8 @@
+# Una fábrica de cajas registra los N productos elaborados, para esto ingresa en un proceso repetitivo: el tamaño (chico, mediano o grande) y el material (plástico o cartón). Construya un programa que permita mostrar:
+# a) Cantidad de cajas de plástico y de cartón.
+# b) EI porcentaje de cajas chicas, medianas y grandes elaboradas.
+
+
 
 # solicita al usuario el numero de productos
 productos = int(input("Ingrese el número de productos: "))

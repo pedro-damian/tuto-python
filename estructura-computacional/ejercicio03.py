@@ -1,3 +1,6 @@
+# Construir un programa que calcule y muestre el sueldo de los N empleados de una empresa que trabajan por horas, la tarifa por cada hora trabajada es única (igual) para todos los empleados, asimismo, calcular la cantidad de empleados que reciben un sueldo menor a S/.700, la cantidad de empleados que reciben un sueldo entre S/ ,700 y S/.1300 y la cantidad de empleados que reciben un sueldo mayor a S/.1300. Y el porcentaje en cada uno de los rangos.
+
+
 
 # solicita al usuario el numero de empleados
 cantidad_empleados = int(input("Ingrese el número de empleados: "))
