@@ -1,3 +1,6 @@
+""" Se ingresan los resultados de la evaluación del curso de Química; por cada alumno se informa: su condición (1 = ingresante, 2 = traslado) y su calificación obtenida que va de 0 a 20. Para estar aprobado debe tener una nota mínima de 14, A partir de esta información se debe mostrar:
+• La cantidad de alumnos ingresantes y la cantidad de traslado.
+• La nota promedio de los aprobados y la nota promedio de los desaprobados, EI programa termina cuando no se desea registrar más alumnos. """
 
 
 # Inicializar variables

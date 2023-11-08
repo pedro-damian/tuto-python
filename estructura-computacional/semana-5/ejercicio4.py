@@ -1,3 +1,8 @@
+""" Se realiza un muestreo con N personas, de las cuales se registran sus edades y sus pesos. Se
+pide elaborar un programa que calcule el promedio de pesos de las personas menores de 18
+años y el promedio de pesos de los que tienen 18 años a mas. """
+
+
 
 if __name__ == "__main__":
     n = int(input("Ingrese la cantidad de personas en el muestreo: "))
