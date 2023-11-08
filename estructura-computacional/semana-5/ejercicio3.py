@@ -1,6 +1,6 @@
 """ Crear un programa que permita ingresar una gran cantidad de números enteros positivos y
 calcule la cantidad de múltiplos de 3 y múltiplos de 7 encontrados en la relación de números
-ingresados, EI programa termina cuando se ingresa un número mayor a 100.
+ingresados, El programa termina cuando se ingresa un número mayor a 100.
  """
 
 # inicializa variables en cero

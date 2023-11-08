@@ -13,15 +13,15 @@ num_desaprobados = 0
 
 # mientras la condicion sea true
 while True:
-    condicion = int(input("Elija una opcion para el alumno 1 = ingresante, 2 = traslado, 0 = terminar: "))
+    # pedimos una condicion donde 1= ingresante 2= traslado y 0= terminar proceso
+    condicion = int(input("Elija una opcion para el alumno (1 = ingresante, 2 = traslado, 0 = terminar:) "))
 
     # si condicion es igual a 0 
     if condicion == 0:
         # se detiene el ciclo
         break
 
-
-    calificacion = float(input("Ingrese la calificación obtenida: "))
+    calificacion = float(input("Ingrese la calificación obtenida de 0 a 20: "))
 
     # si condicion es igual a 1
     if condicion == 1:
