@@ -62,7 +62,7 @@ print(f"Los elementos valor del diccionario son {aula.values()}")
 aula['Profesor'] = 'Manuel perez'
 # operando un valor
 aula['N_alumnos'] -= 10
-# agregando un valor nuevo
+# agregando un valor nuevo a una lista dentro del diccionario
 aula['materias'].append('calculo')
 print("--------------------------------------------------------------------")
 print(f"Llave unica actualizada se modifico el valor de profesor a {aula}")
