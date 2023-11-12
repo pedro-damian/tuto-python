@@ -40,3 +40,7 @@ print("I'm Monty Python.")
 # BOOLEANOS
 print(True > False) # true = 1 y  false = 0
 print(True < False) # true = 1 y  false = 0
+
+
+# EJERCICIO 
+print('"estoy"\n""aprendiendo""\n"""python"""')
