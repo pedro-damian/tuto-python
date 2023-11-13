@@ -44,3 +44,53 @@ adan=6
 total_manzanas = juan + maria + adan
 print(juan,maria,adan, sep=",")
 print("El numero total de manzanas es:",total_manzanas)
+
+
+# OPERADORES ABREVIADOS (+=)(-=)(*=)(/=)(%=)(**=)
+
+var = 8
+var = var / 2 
+var /= 2
+
+rem = 100
+rem = rem % 10  
+rem %= 10
+
+x = 2
+x = x ** 2 
+x **= 2
+
+
+""" Millas y kilómetros son unidades de longitud o distancia.
+Teniendo en mente que 1 milla equivale aproximadamente a 1.61 kilómetros, complementa el programa en el editor para que convierta de:
+Millas a kilómetros.
+Kilómetros a millas.
+ """
+
+kilometers = 12.25
+miles = 7.38
+
+miles_to_kilometers = miles * 1.61
+kilometers_to_miles = kilometers / 1.61
+
+print(miles, "millas son", round(miles_to_kilometers, 2), "kilómetros")
+print(kilometers, "kilómetros son", round(kilometers_to_miles, 2), "millas")
+
+
+""" Observa el código en el editor: lee un valor flotante, lo coloca en una variable llamada x, e imprime el valor de la variable llamada y. Tu tarea es completar el código para evaluar la siguiente expresión: 3x3 - 2x2 + 3x - 1
+El resultado debe ser asignado a y. """
+
+x = input("ingrese numero: ")
+x = float(x)
+# escribe tu código aquí
+y = 3*x**3 -2*x**2+3*x-1
+print("El resultado de y es =", y)
+
+
+""" calcula los segundos en cierto número de horas determinadas  """
+a = 2 # número de horas
+seconds = 3600 # número de segundos en una hora
+
+print("Horas: ", a) #imprime el numero de horas
+print("Segundos en Horas: ", a * seconds) # se imprime el numero de segundos en determinado numero de horas
+
