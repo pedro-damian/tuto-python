@@ -61,6 +61,7 @@ print(12 % 4.5) # el residuo es 3.0
 # si los dos numeros son numeros enteros el resultado sera un numero entero
 # si uno de los numeros es decimal el resultado sera un numero decimal
 
+
 print(-4 + 4)
 print(-4. + 8)
 
