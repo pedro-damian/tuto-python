@@ -20,7 +20,7 @@ for i in range(2, 8):
 print("-"*30)
 
 #----------------------------------------------------------------------------------------------------------------------------
-# IMPRIMIRA 2 y 5 (el tercer argumento son saltos)
+# IMPRIMIRA 2 y 5 (la funcion range con 3 argumentos, el tercer argumento son saltos)
 for i in range(2, 8, 3):
     print("El valor de i es actualmente", i)
 print("-"*30)
