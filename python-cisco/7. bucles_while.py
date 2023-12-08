@@ -110,3 +110,18 @@ print("El numero secreto es: ", secret_number, "¡Bien hecho, muggle! Eres libre
 
 #----------------------------------------------------------------------------------------------------------------------------
 
+# Crea un bucle while que cuente de 0 a 10, e imprima números impares en la pantalla
+x = 1
+while x < 11:
+    if x%2 !=0:
+        print(x)
+    x+=1
+    
+#------------------------------------------------------------------------------------------------------------
+
+n = 3
+while n > 0:
+    print(n + 1)
+    n -= 1
+else:
+    print(n)

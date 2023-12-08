@@ -108,7 +108,7 @@ print("\n",word_without_vowels)
 
 # operadores logicos and or y not
 
-# Listas
+
 # ordenamiento de listas
 # operaciones en listas
 # listas en aplicaciones
