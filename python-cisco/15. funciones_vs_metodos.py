@@ -31,3 +31,23 @@ for i in range(5):
     my_list.append(i + 1)
 
 print(my_list)
+
+#------------------------------------------------------------------------------------------------------------
+#SUMAR todos los numeros de una lista con el metodo range
+my_list = [10, 1, 8, 3, 5]
+total = 0
+
+for i in range(len(my_list)):
+    total += my_list[i]
+
+print(total)
+
+#SUMAR todos los numeros de una lista
+my_list = [10, 1, 8, 3, 5]
+total = 0
+
+for i in my_list:
+    total += i
+
+print(total)
+
