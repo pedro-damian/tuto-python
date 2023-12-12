@@ -106,9 +106,3 @@ for letter in user_word:
 # Imprimir la palabra asignada a word_without_vowels.
 print("\n",word_without_vowels)
 
-# operadores logicos and or y not
-
-
-# ordenamiento de listas
-# operaciones en listas
-# listas en aplicaciones
