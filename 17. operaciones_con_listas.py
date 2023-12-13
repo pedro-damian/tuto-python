@@ -156,15 +156,50 @@ else: # de los contrario
     
 #--------------------------------------------------------------------------------------------------------------------------------------------------
     
-N_loteria = [5, 11, 9, 42, 3, 49]
-apuesta = [3, 7, 11, 42, 34, 49]
+drawn = [5, 11, 9, 42, 3, 49] # numeros de la loteria
+bets = [3, 7, 11, 42, 34, 49] # numeros de la apuesta
 hits = 0
+hits_found = [] # lista vacia donde se guardara los numeros ganadores
 
-for number in apuesta:
-    if number in N_loteria:
+for number in bets:
+    if number in drawn:
+        hits_found.append(number)
         hits += 1
+print("La cantidad de aciertos logrados son:",hits,"Los numeros son:",hits_found)
 
-print(hits)
 
+#--------------------------------------------------------------------------------------------------------------------------------------------------
+
+""" LABORATORIO: Eliminar elementos duplicados en una lista """
+
+# 1° OPCION : es convirtiendo a un conjunto y luego a una lista
+my_list = [1, 5, 2, 4, 4,5, 1, 4, 2, 6, 2, 9]
+# aqui la lista se convierte en un conjunto con set() (los conjuntos no admiten elementos duplicados) y en la misma linea se convierte a lista con list()
+my_list = list(set(my_list))
+print("La lista con elementos únicos:", my_list)
+print("El tipo es:",type(my_list))
+
+
+# 2° OPCION : es convirtiendo a un diccionario y luego a una lista
+my_list = [1, 5, 2, 4, 4,5, 1, 4, 2, 6, 2, 9]
+# aqui la lista se convierte en diccionario dict.fromkeys() donde cada elemento se convierte en clave y sus valores es none (los diccionarios no pueden tener claves duplicadas y mantendran el orden original) luego es convertido a lista con list()
+my_list = list(dict.fromkeys(my_list))
+print("La lista con elementos únicos:", my_list)
+print("El tipo es:",type(my_list))
+
+
+# 3° OPCION : es utilizando el bucle for
+my_list = [1, 5, 2, 4, 4,5, 1, 4, 2, 6, 2, 9]
+lista_no_repetida = []
+
+# por cada elemento en mi lista
+for elemento in my_list:
+    # si elemento no se encuentra en lista no repetida
+    if elemento not in lista_no_repetida:
+        # entonces se agrega a la lista no repetida
+        lista_no_repetida.append(elemento)
+
+print("La lista con elementos únicos:",lista_no_repetida)
+print("El tipo es:",type(lista_no_repetida))
 
 
