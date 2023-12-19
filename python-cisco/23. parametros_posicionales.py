@@ -41,3 +41,23 @@ introduction(surname="Skywalker", first_name="Luke")
 """
 
 
+#-------------------------------------------------------------------------------------------------------------------------------------
+
+# ARGUMENTOS COMBINADOS: Posicionales y Palabra clave
+# Es posible combinar ambos tipos si se desea, solo hay una regla inquebrantable: se deben colocar primero los argumentos posicionales y después los de palabra clave.
+
+def agregar(a, b, c):
+    print(a, "+", b, "+", c, "=", a + b + c)
+
+agregar(3, c = 1, b = 2) # aqui el argumento 3 asume el parametro a
+agregar(4, 3, c = 2) # aqui el argumento 4 y 3 toman el parametro a y b respectivamente
+
+# aqui mostraria error
+
+""" 
+def subtra(a, b):
+    print(a - b)
+
+subtra(a=5, 2)    # Syntax Error 
+
+"""
