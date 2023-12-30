@@ -31,15 +31,13 @@ for i in range(5):
     print(random())
 
 
-#----------------------------- funcion randrange() y randint() ------------------------------------
-
+#----------------------------- funcion randint() ------------------------------------
+# Permite especificar un rango de números usando los parámetros start, stop y opcionalmente step.
 
 """ valores enteros
 randrange(fin)
 randrange(inico, fin)
 randrange(inicio, fin, incremento) 
-randint(izquierda, derecha)
-
 """
 
 from random import randrange, randint
@@ -47,4 +45,33 @@ from random import randrange, randint
 print(randrange(1), end=' ')
 print(randrange(0, 1), end=' ')
 print(randrange(0, 1, 1), end=' ')
-print(randint(0, 1)) # aqui sera entre 1 o 0
+
+
+
+#----------------------------- funcion randint() ------------------------------------
+# Permite especificar un rango de números mediante los parámetros a y b.
+# es más simple y directa, generando un entero aleatorio en el rango específico sin la opción de un paso personalizado.
+
+""" 
+randint(izquierda, derecha) 
+
+"""
+
+print(randint(0, 5))
+
+
+#----------------------------- funcion choice() ------------------------------------
+# Devuelve un único elemento aleatorio
+
+from random import choice, sample
+
+my_list = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+print(choice(my_list))
+
+
+#----------------------------- funcion sample() ------------------------------------
+# Devuelve una lista con los elementos únicos (sin repetición)
+
+print(sample(my_list, 5))
+print(sample(my_list, 10))
