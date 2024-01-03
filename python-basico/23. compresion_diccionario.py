@@ -73,10 +73,14 @@ print(peso_mayor_500)
 
 texto = 'hola mundo, como estas'
 
-letras = {}
+letras = {elemento:elemento.upper() for elemento in texto if elemento in 'aeiou'}
 
+""" 
 for elemento in texto:
     if elemento in 'aeiou':
-        letras[elemento] = elemento.upper()
+        letras[elemento] = elemento.upper() 
+"""
         
 print(letras)
+
+
