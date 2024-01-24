@@ -67,5 +67,76 @@ print('kappa'.find('a', 1, 4)) # 1
 print('kappa'.find('a', 2, 4)) # -1
 
 
+# -------------------- isalnum() --------------------------
+# comprueba si la cadena contiene solo dígitos o caracteres alfabéticos (letras) y devuelve True(verdadero) o False(falso)
+
+print('lambda30'.isalnum())     # True
+print('lambda'.isalnum())       # True
+print('30'.isalnum())           # True
+print('@'.isalnum())            # False
+print('lambda_30'.isalnum())    # False
+print(''.isalnum())             # False
+
+t = 'Six lambdas'
+print(t.isalnum())      # False , aqui da falso por el espacio
+t = 'ΑβΓδ'
+print(t.isalnum())      # True
+t = '20E1'
+print(t.isalnum())      # True
 
 
+# -------------------- isalpha() --------------------------
+# busca solo letras.
+print("Moooo".isalpha())    # True
+print('Mu40'.isalpha())     # False
+
+
+
+# -------------------- isdigit() --------------------------
+# busca solo dígitos
+print('2018'.isdigit())     # True
+print("Year2019".isdigit()) # False
+
+# -------------------- islower() --------------------------
+# es una variante de isalpha() - solo acepta letras minúsculas.
+print("Moooo".islower())    # False
+print('moooo'.islower())    # True
+
+
+# -------------------- isspace() --------------------------
+# identifica espacios en blanco solamente - no tiene en cuenta ningún otro carácter (el resultado es entonces False).
+print(' \n '.isspace())             # True
+print(" ".isspace())                # True
+print("mooo mooo mooo".isspace())   # False
+
+
+
+# -------------------- isupper() --------------------------
+# es la versión en mayúscula de islower() - se concentra solo en letras mayúsculas.
+print("Moooo".isupper())    # False
+print('moooo'.isupper())    # False
+print('MOOOO'.isupper())    # True
+
+
+# -------------------- join() --------------------------
+# utiliza para concatenar elementos de una secuencia en una cadena de texto
+# la cadena desde la que se ha invocado el método será utilizada como separador, puesta entre las cadenas.
+# El argumento del join es una lista que contiene tres cadenas.
+
+palabras = ["Hola", "mundo", "Python"]
+cadena_resultante = " ".join(palabras)
+print(cadena_resultante)                    # Hola mundo Python
+
+
+# -------------------- ilower() --------------------------
+# genera una copia de una cadena, reemplaza todas las letras mayúsculas con sus equivalentes en minúsculas.
+# Si la cadena no contiene caracteres en mayúscula, el método devuelve la cadena original.
+
+print("SiGmA=60".lower())       # sigma=60
+
+
+# -------------------- lstrip() --------------------------
+# devuelve una cadena recién creada formada a partir de la original eliminando todos los espacios en blanco iniciales.
+
+
+# -------------------- isalnum() --------------------------
