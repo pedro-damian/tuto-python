@@ -138,5 +138,98 @@ print("SiGmA=60".lower())       # sigma=60
 # -------------------- lstrip() --------------------------
 # devuelve una cadena recién creada formada a partir de la original eliminando todos los espacios en blanco iniciales.
 
+print("   www.cisco.com".lstrip())  # www.cisco.com
 
-# -------------------- isalnum() --------------------------
+# lstrip() con parametro elimina todos los caracteres incluidos en el argumento (una cadena), no solo espacios en blanco:
+
+print("www.cisco.com".lstrip("w.")) # cisco.com
+print("pythoninstitute.org".lstrip(".org")) # pythoninstitute.org
+
+
+# -------------------- replace() --------------------------
+# El método replace() con dos parámetros devuelve una copia de la cadena original en la que todas las apariciones del primer argumento han sido reemplazadas por el segundo argumento.
+
+print("www.netacad.com".replace("netacad.com", "pythoninstitute.org"))  # www.pythoninstitute.org
+print("This is it!".replace("is", "are"))                               # Thare are it!
+print("Apple juice".replace("juice", ""))                               # Apple
+
+# El método replace() con tres parámetros emplea un tercer argumento (un número) para limitar el número de reemplazos.
+print("This is it!".replace("is", "are", 1))    # Thare is it!
+print("This is it!".replace("is", "are", 2))    # Thare are it!
+
+
+# -------------------- rfind() --------------------------
+# hacen casi lo mismo que sus contraparte find(), pero comienzan sus búsquedas desde el final de la cadena y no del principio
+print("tau tau tau".rfind("ta"))            # 8
+print("tau tau tau".rfind("ta", 9))         # -1
+print("tau tau tau".rfind("ta", 3, 9))      # 4
+
+
+# ------------------- rstrip() ---------------------------
+# hacen casi lo mismo que el método lstrip, pero afecta el lado opuesto de la cadena osea el lado derecho
+
+print("[" + " upsilon ".rstrip() + "]")     # [ upsilon]
+print("cisco.com".rstrip(".com"))           # cis
+
+
+# ------------------- split() ---------------------------
+# divide la cadena y crea una lista de todas las subcadenas detectadas.
+# El método asume que las subcadenas están delimitadas por espacios en blanco
+# Si la cadena está vacía, la lista resultante también está vacía.
+
+print("phi       chi\npsi".split())         # ['phi', 'chi', 'psi']
+
+# Nota: la operación inversa se puede realizar por el método join().
+
+
+# ------------------- startswith() ---------------------------
+# El método startswith() es un espejo del método endswith() - comprueba si una cadena dada comienza con la subcadena especificada.
+
+print("omega".startswith("meg"))            # False
+print("omega".startswith("om"))             # True
+
+
+# ------------------- strip() ---------------------------
+# combina los efectos causados por rstrip() y lstrip() - crea una nueva cadena que carece de todos los espacios en blanco iniciales y finales.
+
+print("[" + "   aleph   ".strip() + "]")    # [aleph]
+
+
+# ------------------- swapcase() ---------------------------
+# crea una nueva cadena intercambiando todas las letras por mayúsculas o minúsculas dentro de la cadena original: los caracteres en mayúscula se convierten en minúsculas y viceversa.
+
+print("Yo sé que no sé nada.".swapcase())   # yO SÉ QUE NO SÉ NADA.
+
+
+# ------------------- title() ---------------------------
+# realiza una función algo similar cambia la primera letra de cada palabra a mayúsculas, convirtiendo todas las demás a minúsculas.
+
+print("Yo sé que no sé nada. Part 1.".title())  # Yo Sé Que No Sé Nada. Parte 1.
+
+
+# ------------------- upper() ---------------------------
+# hace una copia de la cadena de origen, reemplaza todas las letras minúsculas con sus equivalentes en mayúsculas, y devuelve la cadena como resultado.
+
+print("Yo sé que no sé nada. Part 2.".upper())  # YO SÉ QUE NO SÉ NADA. PARTE 2.
+
+
+
+"""  LABORATORIO:
+
+Tu tarea es escribir tu propia función, que se comporte casi como el método original split(), por ejemplo:
+
+Debe aceptar únicamente un argumento: una cadena.
+Debe devolver una lista de palabras creadas a partir de la cadena, dividida en los lugares donde la cadena contiene espacios en blanco.
+Si la cadena está vacía, la función debería devolver una lista vacía.
+Su nombre debe ser mysplit(). 
+
+"""
+
+def mysplit(strng):
+    return strng.split()
+
+print(mysplit("Ser o no ser, esa es la pregunta"))  # ['Ser', 'o', 'no', 'ser', 'esa', 'es,', 'la', 'pregunta']
+print(mysplit("Ser o no ser,esa es la pregunta"))   # ['Ser', 'o', 'no', 'ser,esa', 'es', 'la', 'pregunta']
+print(mysplit("   "))                               # []
+print(mysplit(" abc "))                             # ['abc']
+print(mysplit(""))                                  # []
