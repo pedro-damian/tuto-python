@@ -50,8 +50,8 @@ class Aplicacion:
     def recuperar(self):
         if len(self.listbox1.curselection()) !=0:
             todas=''
-            for posicion in self.listbox1.curselection():
+        for posicion in self.listbox1.curselection():
                 todas+=self.listbox1.get(posicion)+"\n"
-            self.label1.configure(text=todas)
+        self.label1.configure(text=todas)
 
 aplicacion1 = Aplicacion()
