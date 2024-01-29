@@ -29,3 +29,4 @@
 
 #>>>>>>>> En MacOS
 # usando el instalador brew, pip ya está presente en tu sistema y listo para funcionar
+
