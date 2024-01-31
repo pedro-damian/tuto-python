@@ -4,6 +4,7 @@
 # El nombre alternativo para una pila (pero solo en la terminología de TI) es UEPS (LIFO son sus siglas en inglés).
 # Es una abreviatura para una descripción muy clara del comportamiento de la pila: Último en Entrar - Primero en Salir (Last In - First Out).
 # Una pila es un objeto con dos operaciones elementales, denominadas convencionalmente push (cuando un nuevo elemento se coloca en la parte superior) y pop (cuando un elemento existente se retira de la parte superior).
+# La pila normalmente realiza al menos dos operaciones, llamadas push() y pop().
 
 stack = []  # pila
 
@@ -25,6 +26,7 @@ print(pop())    # elimina el ultimo numero ingresado 3
 
 
 #------------------- Constructor -----------------------
+# La parte de la clase en Python responsable de crear nuevos objetos se llama constructor y se implementa como un método de nombre __init__.
 
 class Stack:  # Definiendo la clase de la pila.
     def __init__(self):  # Definiendo la función del constructor.
@@ -95,14 +97,15 @@ class Stack:
         return val
 
 
-# Ingresa código aquí.
+little_stack = Stack()         # creo primer objeto de la clase Stack
+another_stack = Stack()        # creo segundo objeto de la clase Stack
+funny_stack = Stack()          # creo tercer objeto de la clase Stack
 
-little_stack = Stack()
-another_stack = Stack()
-funny_stack = Stack()
+little_stack.push(1)                            # el primer objeto introduce el numero 1
+another_stack.push(little_stack.pop() + 1)      # el segundo objeto introduce el numero 2 ( esto se debe a la operacion dentro del parentesis)
+funny_stack.push(another_stack.pop() - 2)       # el tercer objeto introduce el numero 0 ( de igual forma a la operacion dentro del parentesis)
 
-little_stack.push(1)
-another_stack.push(little_stack.pop() + 1)
-funny_stack.push(another_stack.pop() - 2)
+print(funny_stack.pop())                        # elimina y imprime el numero
 
-print(funny_stack.pop())
+
+# ------------- CREANDO UNA SUBCLASE --------------------

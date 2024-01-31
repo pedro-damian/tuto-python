@@ -11,12 +11,14 @@ class Aplicacion:
     
     self.Productos = []
     
-    #self.scrollbar = Scrollbar(self.ventana)
+    self.scrollbar = Scrollbar(self.ventana)
           
-    self.lista_elementos= Listbox(self.ventana,width=50)  # bd=2, relief="solid"
-    #self.scrollbar.config(command=self.lista_elementos.yview)
-    #self.scrollbar.grid(column=1, row=0, sticky=Tk.NS)
+    self.lista_elementos= Listbox(self.ventana,width=50, yscrollcommand=self.scrollbar.set)  # bd=2, relief="solid"
     self.lista_elementos.place(x=70, y=100)
+    
+    
+    self.scrollbar.config(command=self.lista_elementos.yview)
+    self.scrollbar.grid(column=2, row=0, sticky=NS)
     
     
     # Label Producto y Texto de entrada Producto

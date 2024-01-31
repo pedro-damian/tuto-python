@@ -12,9 +12,9 @@ class Aplicacion:
 
         # Configurar el scrollbar para desplazar el Listbox
         self.scroll1.config(command=self.listbox1.yview)
+        self.scroll1.grid(column=1, row=0, sticky=tk.NS) # le da ubicacion al scroll1 y configura el desplazamiento del scroll
 
         self.listbox1.grid(column=0,row=0)
-        self.scroll1.grid(column=1, row=0, sticky=tk.NS) # le da ubicacion al scroll1 y configura el desplazamiento del scroll
         self.listbox1.insert(0,"amazonas")
         self.listbox1.insert(1,"ancash")
         self.listbox1.insert(2,"apurimac")
