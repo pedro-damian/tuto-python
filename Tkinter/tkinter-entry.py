@@ -20,7 +20,9 @@ miframe.pack() # empaquetar dentro de raiz
 
 nombrelabel = Label(miframe, text="Nombre:")
 nombrelabel.grid(row=0, column=0, sticky="w", padx=60)
-cuadronombre = Entry(miframe)
+
+minombre = StringVar()
+cuadronombre = Entry(miframe, textvariable=minombre)
 cuadronombre.grid(row=0, column=1)
 cuadronombre.config(fg="red", justify="center")
 
@@ -48,6 +50,10 @@ comentariolabel.grid(row=4, column=0, sticky="w", padx=60, pady=10)
 cuadrocomentario = Text(miframe, width=50, height=5)
 cuadrocomentario.grid(row=5, column=0, columnspan=2)
 
+
+def enviardatos():
+  minombre.set("Pedro")
+
 botonenviar = Button(raiz, text="Enviar", command=enviardatos)
 botonenviar.pack()
 
@@ -58,7 +64,6 @@ scrollvertical.grid(row=5, column=2, sticky="ns")
 cuadrocomentario.config(yscrollcommand=scrollvertical.set)
 
 
-def enviardatos():
-  minombre.set("Pedro")
+
 
 raiz.mainloop()

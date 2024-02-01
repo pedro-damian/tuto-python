@@ -11,14 +11,14 @@ class Aplicacion:
     
     self.Productos = []
     
-    self.scrollbar = Scrollbar(self.ventana)
+    #self.scrollbar = Scrollbar(self.ventana)
           
-    self.lista_elementos= Listbox(self.ventana,width=50, yscrollcommand=self.scrollbar.set)  # bd=2, relief="solid"
+    self.lista_elementos= Listbox(self.ventana,width=50, selectmode=MULTIPLE)  # bd=2, relief="solid"
     self.lista_elementos.place(x=70, y=100)
     
     
-    self.scrollbar.config(command=self.lista_elementos.yview)
-    self.scrollbar.grid(column=2, row=0, sticky=NS)
+    #self.scrollbar.config(command=self.lista_elementos.yview)
+    #self.scrollbar.grid(column=2, row=0, sticky=NS)
     
     
     # Label Producto y Texto de entrada Producto
@@ -39,9 +39,10 @@ class Aplicacion:
     self.boton_añadir = Button(self.ventana, text="añadir", width=5, command=self.añadir)
     self.boton_añadir.place(x=450, y=40)
     
-    # MOSTRAR PRECIO
+    # BOTON MOSTRAR PRECIO
     self.boton_añadir = Button(self.ventana, text="Mostrar Precio", width=15, command=self.mostrar_precio)
     self.boton_añadir.place(x=70, y=300)
+
     # CAJA SALIDA DE PRECIO
     self.caja_precio = Entry(self.ventana, width=10)
     self.caja_precio.place(x=70, y=350)
@@ -60,9 +61,9 @@ class Aplicacion:
     self.Productos.append({'nombre': producto, 'precio': precio})
     
     self.lista_elementos.insert(END, producto)
-    self.entrada_producto.set("")  # Limpiar la entrada productos después de añadir el elemento
-    self.entrada_precio.set("")    # Limpiar la entrada precios después de añadir el elemento
-    self.entrada_elementos1.focus_set() # Establecer el foco en la entrada de productos
+    #self.entrada_producto.set("")  # Limpiar la entrada productos después de añadir el elemento
+    #self.entrada_precio.set("")    # Limpiar la entrada precios después de añadir el elemento
+    #self.entrada_elementos1.focus_set() # Establecer el foco en la entrada de productos
     
 
   def mostrar_precio (self):
@@ -77,8 +78,13 @@ class Aplicacion:
 
 
   def eliminar(self):
-    indice = self.lista_elementos.curselection()
-    if indice:
+    # Obtener los índices de los elementos seleccionados
+    indices = self.lista_elementos.curselection()
+
+    # Iterar sobre los índices seleccionados y eliminar los elementos
+    for indice in reversed(indices):
       self.lista_elementos.delete(indice)
+
+
 
 aplicacion1 = Aplicacion()
