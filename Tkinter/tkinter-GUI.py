@@ -9,7 +9,7 @@ raiz.title("Ventana de Pruebas")
 # raiz.geometry("500x300") # tamaño de la ventana
 
 raiz.iconbitmap("") # icono de la ventana
-raiz.config(bg="green")
+raiz.config(bg="green") # background de raiz
 
 # CREANDO UN FRAME
 miframe = Frame()

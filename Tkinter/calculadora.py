@@ -2,20 +2,56 @@
 from tkinter import *
 
 raiz=Tk()
+raiz.title("Calculadora")
 
 miframe = Frame(raiz)
 miframe.pack()
 
+# VARIABLES GLOBALES
+operacion=""
+resultado=0
+
 #------------------------Pantalla --------------------------------
 
 numero_pantalla=StringVar()  # creamos una variable con el nombre numero_pantalla donde recibira los numeros 
-pantalla=Entry(miframe, textvariable=numero_pantalla) # agregamos un argumento de configuracion textvariable mostrara los numeros 
+pantalla=Entry(miframe, textvariable=numero_pantalla) # agregamos un argumento de configuracion textvariable mostrara los numeros en pantalla
 pantalla.grid(row=1, column=1,pady=5,columnspan=4)
 pantalla.config(background="black", fg="#03f943", justify="right")
 
 #------------------------Pulsaciones de los Botones --------------------------------
 def numero_pulsado(num):
-  numero_pantalla.set(numero_pantalla.get() + num)
+  global operacion
+  
+  # si operacion es diferente a cadena vacias
+  if operacion !="":
+    numero_pantalla.set(num) # muestre los numeros nuevos sin concatenar
+    operacion=""  # aqui operacion vuelve a tener cadena vacia
+  else:
+    numero_pantalla.set(numero_pantalla.get() + num) # de lo contrario que siga concatenando numeros
+  
+
+#------------------------Funcion Suma --------------------------------
+def suma(num):
+  global operacion
+  global resultado
+  resultado+=int(num)
+  operacion="suma"
+  numero_pantalla.set(resultado)
+
+#------------------------Funcion resta --------------------------------
+def resta(num):
+  global operacion
+  global resultado
+  resultado-=int(num)
+  operacion="resta"
+  numero_pantalla.set(resultado)
+
+
+#------------------------Funcion total --------------------------------
+def total():
+  global resultado
+  numero_pantalla.set(resultado+int(numero_pantalla.get()))
+  resultado=0
   
 
 
@@ -47,21 +83,20 @@ boton2= Button(miframe, text="2", width=3, command=lambda:numero_pulsado("2"))
 boton2.grid(row=4,column=2)
 boton3= Button(miframe, text="3", width=3, command=lambda:numero_pulsado("3"))
 boton3.grid(row=4,column=3)
-boton_restar= Button(miframe, text="-", width=3)
+boton_restar= Button(miframe, text="-", width=3, command=lambda:resta(numero_pantalla.get()))
 boton_restar.grid(row=4,column=4)
 
 #--------------- Fila 4 --------------------
-boton_punto= Button(miframe, text=".", width=3)
+boton_punto= Button(miframe, text=".", width=3, command=lambda:numero_pulsado("."))
 boton_punto.grid(row=5,column=1)
 boton0= Button(miframe, text="0", width=3, command=lambda:numero_pulsado("0"))
 boton0.grid(row=5,column=2)
-boton_resultado= Button(miframe, text="=", width=3)
+boton_resultado= Button(miframe, text="=", width=3, command=lambda:total())
 boton_resultado.grid(row=5,column=3)
-boton_suma= Button(miframe, text="+", width=3)
+boton_suma= Button(miframe, text="+", width=3, command=lambda:suma(numero_pantalla.get()))
 boton_suma.grid(row=5,column=4)
 
-def enviardatos():
-  minombre.set("Pedro") 
+
 
 
 raiz.mainloop()
