@@ -43,4 +43,5 @@ resultado.grid(row=6,column=0)
 
 
 
+
 raiz.mainloop()
