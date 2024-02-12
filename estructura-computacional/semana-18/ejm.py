@@ -1,30 +1,20 @@
-
 import tkinter as tk
 from tkinter import ttk
 
-def on_select(event):
-    item = tree.selection()[0]
-    value = tree.item(item, "values")
-    print("Elemento seleccionado:", value)
-
 root = tk.Tk()
-root.title("Ejemplo de Treeview con eventos")
+root.title("Ejemplo de Treeview con inserción manual")
 
-# Crear Treeview
-tree = ttk.Treeview(root, columns=("col1", "col2"), show="headings")
+# Crear Treeview con cuatro columnas
+tree = ttk.Treeview(root, columns=("Columna1", "Columna2", "Columna3", "Columna4"), show="headings")
+tree.heading("Columna1", text="Columna 1")
+tree.heading("Columna2", text="Columna 2")
+tree.heading("Columna3", text="Columna 3")
+tree.heading("Columna4", text="Columna 4")
 tree.pack()
 
-# Definir encabezados de columna
-tree.heading("col1", text="Nombre")
-tree.heading("col2", text="Edad")
-
-# Agregar datos
-tree.insert("", "0", values=("Juan", 30))
-tree.insert("", "1", values=("María", 25))
-
-# Configurar evento de selección
-tree.bind("<<TreeviewSelect>>", on_select)
+# Insertar datos manualmente
+tree.insert("", "end", values=("Dato1", "Dato2", "Dato3", "Dato4"))
+tree.insert("", "end", values=("Dato5", "Dato6", "Dato7", "Dato8"))
+tree.insert("", "end", values=("Dato9", "Dato10", "Dato11", "Dato12"))
 
 root.mainloop()
-
-
