@@ -1,7 +1,8 @@
 
 import tkinter as tk
 from tkinter import ttk
-from PIL import ImageTk, Image
+from PIL import ImageTk, Image # pip install pillow en caso no lo tengas instalado
+
 
 def mostrar_imagen():
     # Obtener la ruta de la imagen seleccionada en el Combobox
@@ -9,7 +10,7 @@ def mostrar_imagen():
 
     # Cargar la imagen
     imagen = Image.open(imagen_seleccionada)
-    #imagen = imagen.resize((200, 200), Image.ANTIALIAS)  # Ajustar el tamaño de la imagen
+    imagen = imagen.resize((200, 200), Image.ANTIALIAS)  # Ajustar el tamaño de la imagen
     imagen = ImageTk.PhotoImage(imagen)
 
     # Mostrar la imagen en un Label
