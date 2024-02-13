@@ -27,23 +27,23 @@ def eliminar_fila():
 
 # datos personales
 etiqueta_nombre = ttk.Label(ventana, text="Nombre:", anchor="e", width=10)
-etiqueta_nombre.grid(column=0, row=0, pady=5)
+etiqueta_nombre.grid(column=0, row=0, padx=(20,10))
 entry_nombre = ttk.Entry(ventana)
 entry_nombre.grid(column=1, row=0)
 
 etiqueta_origen = ttk.Label(ventana, text="Origen:", anchor="e", width=10)
-etiqueta_origen.grid(column=0, row=1, pady=5)
+etiqueta_origen.grid(column=0, row=1, padx=(20,10))
 entry_origen = ttk.Entry(ventana)
 entry_origen.grid(column=1, row=1)
 
-etiqueta_destino = ttk.Label(ventana, text="Destino:", anchor="e")
-etiqueta_destino.grid(column=0, row=2)
+etiqueta_destino = ttk.Label(ventana, text="Destino:", anchor="e", width=10)
+etiqueta_destino.grid(column=0, row=2,  padx=(20,10))
 destinos = ("Cuzco", "Puno", "Arequipa", "Iquitos", "Tacna", "Piura", "Trujillo")
 combo_destinos = ttk.Combobox(ventana, values=destinos, width=19)
 combo_destinos.grid(column=1, row=2)
 
-etiqueta_asientos = ttk.Label(ventana, text="N asientos:", anchor="e")
-etiqueta_asientos.grid(column=0, row=3)
+etiqueta_asientos = ttk.Label(ventana, text="N° Asientos:", anchor="e", width=10)
+etiqueta_asientos.grid(column=0, row=3,  padx=(20,10))
 entry_asientos = ttk.Entry(ventana)
 entry_asientos.grid(column=1, row=3)
 
@@ -61,9 +61,9 @@ boton_registrar.grid(column=2, row=4, padx=(150,0))
 
 
 
-# SEGUNDA COLUMNA
+# componente Treeview: muestra informacion en mas de 1 columna
 registros = ttk.Treeview(ventana, columns=("col1", "col2", "col3", "col4"), show="headings")
-registros.grid(row=0, column=2, rowspan=4, pady=20)
+registros.grid(row=0, column=2, rowspan=4, pady=20, padx=(20,0))
 
 # Definir encabezados de columna
 registros.heading("col1", text="Nombre")
@@ -72,18 +72,10 @@ registros.heading("col3", text="Destino")
 registros.heading("col4", text="Asientos")
 
 # Crear un Scrollbar
-#scrollvertical = ttk.Scrollbar(ventana, command=registros.yview)
-#scrollvertical.grid(row=1, column=3, sticky="ns")
-#registros.config(yscrollcommand=scrollvertical.set)
+scrollvertical = ttk.Scrollbar(ventana, command=registros.yview)
+scrollvertical.grid(row=0,rowspan=4, column=3,pady=20, sticky="ns")
+registros.config(yscrollcommand=scrollvertical.set)
 
-# Barras de desplazamiento vertical y horizontal
-scroll_y = tk.Scrollbar(ventana, orient="vertical", command=registros.yview)
-scroll_y.grid(row=1, column=3, sticky="ns")
-#scroll_x = tk.Scrollbar(ventana, orient="horizontal", command=registros.xview)
-#scroll_x.grid(row=0, column=3, sticky="ew")
-
-# Configurar barras de desplazamiento para el Treeview
-registros.configure(yscrollcommand=scroll_y.set)
 
 
 

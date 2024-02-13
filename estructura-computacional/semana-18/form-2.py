@@ -36,4 +36,5 @@ scrollbar.grid(row=2, column=1, sticky="ns")
 caja_texto.config(yscrollcommand=scrollbar.set)
 
 
+
 raiz.mainloop()
