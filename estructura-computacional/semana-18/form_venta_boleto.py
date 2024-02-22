@@ -32,14 +32,17 @@ def eliminar_fila():
 def info_imagen(event):
     seleccion = combo_destinos.get()
     if seleccion == "Cuzco":
-        label_imagen.config(image=cuzco)
-        label_imagen.image = cuzco  # Actualizar referencia a la imagen
-        label1.config(text="Machu Picchu\ns/ 240\nBus")
+        label_imagen.image = cuzco
+        #label_imagen.config(image=cuzco)
+        cuzco = PhotoImage(file="cuzco.png")
+        cuzco_size = cuzco.subsample(2,2)
+        label_imagen = tk.Label(imagenes, image=cuzco_size)
+        label_imagen.grid(row=4, column=0,pady=10)
         
-    if seleccion == "arequipa":
-        label_imagen.config(image=arequipa)
-        label_imagen.image = arequipa  # Actualizar referencia a la imagen
-        label1.config(text="El volcan del misti\ns/ 240\nBus")
+        #label_imagen.image = cuzco  # Actualizar referencia a la imagen
+        #label1.config(text="Machu Picchu\ns/ 240\nBus")
+        
+    
 
 #-------------------------------- CREAMOS UN FRAME PARA ENCAPSULAR LOS LABELS Y ENTRYS -------------------------------
 datos_personales = tk.Frame(ventana, width=250, height=250, highlightthickness=0,borderwidth=1, relief="solid")
@@ -112,21 +115,21 @@ registros.column("col4", width=150)  # Ancho de la columna 4
 imagenes = tk.Frame(ventana, width=250, height=250, highlightthickness=0,borderwidth=1, relief="solid")
 imagenes.grid(row=4, column=0, sticky="nsew", pady=10, padx=20)
 
-cuzco = PhotoImage(file="cuzco.png")
-cuzco_size = cuzco.subsample(2,2)
-label_imagen = tk.Label(imagenes, image=cuzco_size)
-label_imagen.grid(row=4, column=0,pady=10)
+#cuzco = PhotoImage(file="cuzco.png")
+#cuzco_size = cuzco.subsample(2,2)
+#label_imagen = tk.Label(imagenes, image=cuzco_size)
+#label_imagen.grid(row=4, column=0,pady=10)
 
-label1 = tk.Label(imagenes, text="Machu Picchu\ns/ 240\nBus")
-label1.grid(row=5, column=0)
+#label1 = tk.Label(imagenes, text="Machu Picchu\ns/ 240\nBus")
+#label1.grid(row=5, column=0)
 
-arequipa = PhotoImage(file="arequipa.png")
-arequipa_size = cuzco.subsample(2,2)
-label_imagen = tk.Label(imagenes, image=arequipa_size)
-label_imagen.grid(row=4, column=0,pady=10)
+#arequipa = PhotoImage(file="arequipa.png")
+#arequipa_size = arequipa.subsample(2,2)
+#label_imagen = tk.Label(imagenes, image=arequipa_size)
+#label_imagen.grid(row=4, column=0,pady=10)
 
-label1 = tk.Label(imagenes, text="Volcan del Misti\ns/ 240\nBus")
-label1.grid(row=5, column=0)
+#label1 = tk.Label(imagenes, text="Volcan del Misti\ns/ 240\nBus")
+#label1.grid(row=5, column=0)
 
 
 
