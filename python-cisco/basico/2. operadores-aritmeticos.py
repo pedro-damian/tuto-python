@@ -77,9 +77,11 @@ print(4. - 8)
 # es un operador con un solo operando
 print(-1.1)
 print(+2)
+# 1 dividido por 4 = 0.25 porque elevar un numero a un exponente negativo es igual a 1 dividido por ese numero elevado al exponente positivo
+# osea 4 ** -1 = 1 / 4
+print(4 ** -1) 
 
-
-# PRIORIDAD DE LOS OPERADORES
+# JERARQUIA DE PRIORIDAD DE LOS OPERADORES
 # 0 => () parentesis
 # 1 => + | - => UNARIO
 # 2 => ** => POTENCIA => de derecha a izquierda
@@ -92,3 +94,15 @@ print(9 % 6 % 2)
 
 # de derecha a izquierda
 print(2 ** 2 ** 3)
+
+# EJERCICIO
+# ¿Cuál es la salida del siguiente programa?
+
+print((2 ** 4), (2 * 4.), (2 * 4)) # 16 8.0 8
+
+print((-2 / 4), (2 / 4), (2 // 4), (-2 // 4)) # -0.5 0.5 0 -1
+
+print((2 % -4), (2 % 4), (2 ** 3 ** 2)) # -2 2 512
+
+
+

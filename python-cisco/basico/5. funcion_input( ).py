@@ -21,7 +21,7 @@ variable = input("Introduce tu nombre: ")
 #print(variable, "al cuadrado es", operacion)
 
 
-# Conversión de datos (casting)
+# CONVERSION DE TIPOS (casting)
 # La funcion int() convierte una entrada en entero 
 
 numero = int(input("Ingrese un numero entero: "))

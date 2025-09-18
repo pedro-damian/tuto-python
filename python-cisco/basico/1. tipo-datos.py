@@ -11,12 +11,15 @@ print(f"Es de tipo {type(hexadecimal)}")
 
 
 # FLOTANTES
-decimal = 4.3
-print(decimal)
-print(f"Es de tipo {type(decimal)}")
+num1_decimal = 4.3
+num2_decimal = -0.0000043  # tambien puede iniciar con un signo negativo
+num3_decimal = .5  # es lo mismo que 0.5
+num4_decimal = 5.  # es lo mismo que 5.0
+print(num1_decimal)
+print(f"Es de tipo {type(num1_decimal)}")
 
 # velocidad de la luz
-luz_velocidad = 3E8   # hay dos opciones "e" o "E" (significa por diez a la n potencia = 3*10 elevado a 8)
+luz_velocidad = 3E8   # hay dos opciones "e" o "E" (significa por diez a la n potencia) = 3*10 elevado a 8
 print(luz_velocidad)
 print(f"Es de tipo {type(luz_velocidad)}")
 
@@ -29,12 +32,17 @@ print(0.0000000000000000000001) # impprimira 1e-22 la opcion mas corta
 
 
 # CADENAS
-# Imprimir comillas dobles
+# Imprimir comillas dobles con el caracter de escape \
 print("Me gusta \"Monty Python\"")
-print('Me gusta "Monty Python"')
-# Imprimir comillas simples
 print('I\'m Monty Python.')
+
+# Imprimir comillas dobles usando apostrofes 
+print('Me gusta "Monty Python"')
+# Imprimir comillas simples usando comillas dobles
 print("I'm Monty Python.")
+
+print('') # imprime una linea vacia
+print("") # imprime una linea vacia
 
 
 # BOOLEANOS
