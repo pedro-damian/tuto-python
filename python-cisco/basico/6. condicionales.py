@@ -1,11 +1,11 @@
 
-# la sentencia if
+##### la sentencia if
 
 #if sheep_counter >= 120: # #evalúa una expresión condicional
     #sleep_and_dream() #se ejecuta si la expresión condicional es True
     
     
-# condicional: la sentencia if-else
+##### condicional: la sentencia if-else
 """ if true_or_false_condition:
     perform_if_condition_true
 else:
@@ -17,7 +17,7 @@ else:
 # Si la condición se evalúa como False (es igual a cero), la instrucción perform_if_condition_false se ejecuta, y la sentencia condicional llega a su fin.
 
 
-# Sentencias if-else anidadas
+##### Sentencias if-else anidadas
 """ if the_weather_is_good:
     if nice_restaurant_is_found:
         have_lunch()
@@ -32,7 +32,7 @@ else:
 # Si hay buen clima, saldremos a caminar. Si encontramos un buen restaurante, almorzaremos allí. De lo contrario, vamos a comer un sandwich. Si hay mal clima, iremos al cine. Si no hay boletos, iremos de compras al centro comercial más cercano.
 
 
-# La sentencia elif
+##### La sentencia elif
 # elif se usa para verificar más de una condición, y para detener cuando se encuentra la primera sentencia verdadera.
 
 """ if the_weather_is_good:
