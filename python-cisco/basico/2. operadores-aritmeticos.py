@@ -31,10 +31,11 @@ print(6. / 3.)
 # una división de entero entre entero da un resultado entero.
 # si algunos de los argumentos es decimal el resultado sera decimal
 
-print(6 // 3)
-print(6 // 3.)
-print(6. // 3)
-print(6. // 3.)
+print(20 // 5)
+print(20 // 5.)
+print(20. // 5)
+print(20. // 5.)
+
 
 # Division Inexacta
 # si ambos numeros son enteros el resultado se redondea hacia abajo y dara un numero entero

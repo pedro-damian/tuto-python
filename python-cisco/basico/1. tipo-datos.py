@@ -52,3 +52,6 @@ print(True < False) # true = 1 y  false = 0
 
 # EJERCICIO 
 print('"estoy"\n""aprendiendo""\n"""python"""')
+
+x = 1 / 2 + 3 // 3 + 4 ** 2
+print(x)

@@ -91,3 +91,7 @@ print("Hola, " + name + ". ¡Un gusto conocerte!")
 print("\nPresiona la tecla Enter para finalizar el programa.")
 input()
 print("FIN.")
+
+
+my_input = input("Ingresa algo: ") # Entrada de ejemplo: hola
+print(my_input * 3)

@@ -39,7 +39,5 @@ print(c>a)
 
 
 n= int(input("Ingrese un numero: "))
-menor = n<100
-mayor = n >=100
-print(f"El numero es menor {menor} o mayor {mayor}")
+print(n >= 100)
 
