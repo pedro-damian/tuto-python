@@ -86,6 +86,8 @@ print("Cuenta de números pares:", even_numbers)
 - Comprobará si el número ingresado por el usuario es el mismo que el número escogido por el mago. Si el número elegido por el usuario es diferente al número secreto del mago, el usuario debería ver el mensaje "¡Ja, ja! ¡Estás atrapado en mi bucle!"  y se le solicitará que ingrese un número nuevamente. 
 - Si el número ingresado por el usuario coincide con el número escogido por el mago, el número debe imprimirse en la pantalla, y el mago debe decir las siguientes palabras: "¡Bien hecho, muggle! Eres libre ahora".
  """
+
+### SOLUCION N1
 print(
 """
 +==================================+
@@ -98,8 +100,7 @@ print(
 +==================================+
 """)
 
-secret_number = 7
-
+secret_number = 777
 numero = int(input("ingrese el numero secreto para terminar el juego: "))
 
 while numero != secret_number:
@@ -107,6 +108,29 @@ while numero != secret_number:
     numero = int(input("ingrese el numero secreto para terminar el juego: "))
 
 print("El numero secreto es: ", secret_number, "¡Bien hecho, muggle! Eres libre ahora!")
+
+### SOLUCION N2
+print(
+"""
++================================+
+| ¡Bienvenido a mi juego, muggle!|
+| Introduce un número entero     |
+| y adivina qué número he        |
+| elegido para ti.               |
+|¿Cuál es el número secreto?     |
++================================+
+""")
+
+secret_number = 777
+number = int(input("Introduce un número o escribe 0 para detener: "))
+while number != 0:
+    if number == secret_number:
+        print("¡Bien hecho, muggle! Eres libre ahora.")
+        number = False
+    else:
+        print("¡Ja, ja! ¡Estás atrapado en mi bucle!")
+        number = int(input("Introduce un número o escribe 0 para detener: "))
+
 
 #----------------------------------------------------------------------------------------------------------------------------
 
