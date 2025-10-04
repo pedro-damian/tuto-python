@@ -35,7 +35,7 @@ for expo in range(16):
     power = power * 2
 
 #----------------------------------------------------------------------------------------------------------------------------
-
+print("------------------------------------------------------------------------------------")
 """ Tu tarea es muy simple aquí: escribe un programa que use un bucle for para "contar de forma mississippi" hasta cinco. Habiendo contado hasta cinco, el programa debería imprimir en la pantalla el mensaje final "¡Listos o no, ahí voy!" """
 
 import time
@@ -52,24 +52,60 @@ print("¡Listos o no, ahí voy!")
 
 
 #----------------------------------------------------------------------------------------------------------------------------
-
+print("------------------------------------------------------------------------------------")
 # Crea un bucle for que cuente de 0 a 10, e imprima números impares en la pantalla
 print("Numeros Impares:")
-for i in range(11):
+for i in range(0,11):
     if i%2 != 0:
-        print(i)
+        print("Los numeros Impares for son:",i)
+
+#----------------------------------------------------------------------------------------------------------------------------
+print("------------------------------------------------------------------------------------")
+# Crea un programa con un bucle for y una sentencia break. El programa debe iterar sobre los caracteres en una dirección de correo electrónico, salir del bucle cuando llegue al símbolo @ e imprimir la parte antes de @ en una línea.
+
+for i in "pedro@gmail.com":
+    if i == "@":
+        break
+    print(i, end=" ")
+
+#----------------------------------------------------------------------------------------------------------------------------
+
+print() # salto de linea
         
 #------------------------------------------------------------------------------------------------------------
+print("------------------------------------------------------------------------------------")
+# Crea un programa con un bucle for y una sentencia continue. El programa debe iterar sobre una cadena de dígitos, reemplazar cada 0 con x, e imprimir la cadena modificada en la pantalla
 
+for digit in "0165031806510":
+    if digit == "0":
+        print("x", end="")
+        continue
+    print(digit, end="")
+
+#----------------------------------------------------------------------------------------------------------------------------
+
+print() # salto de linea
+        
+#------------------------------------------------------------------------------------------------------------
+print("------------------------------------------------------------------------------------")
+n = 3
+while n > 0:
+    print(n + 1)
+    n -= 1
+else:
+    print("El valor de n es:",n)
+
+        
+#------------------------------------------------------------------------------------------------------------
+print("------------------------------------------------------------------------------------")
 n = range(4)
-
 for num in n:
     print(num - 1)
 else:
     print(num)
     
 #------------------------------------------------------------------------------------------------------------
-
+print("------------------------------------------------------------------------------------")
 for i in range(0, 6, 3):
     print(i)
     

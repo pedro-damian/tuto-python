@@ -14,7 +14,6 @@ else:
 """ Tu tarea es escribir un programa que lea la cantidad de bloques que tienen los constructores, y generar la altura de la pirámide que se puede construir utilizando estos bloques.
 Nota: La altura se mide por el número de capas completas: si los constructores no tienen la cantidad suficiente de bloques y no pueden completar la siguiente capa, terminan su trabajo inmediatamente. """
 
-
 bloques = int(input("Ingresa la cantidad de bloques: "))
 # crea y inicializa la variable altura
 altura = 0

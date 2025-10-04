@@ -24,7 +24,7 @@ print("Fuera del bucle.")
 
 """ La instrucción break se implementa para salir/terminar un bucle.
 Diseña un programa que use un bucle while y le pida continuamente al usuario que ingrese una palabra a menos que ingrese "chupacabra" como la palabra de salida secreta, en cuyo caso el mensaje "¡Has dejado el bucle con éxito". Debe imprimirse en la pantalla y el bucle debe terminar. """
-
+# SOLUCION N1:
 palabra= input("Ingrese la palabra secreta para salir del bucle: ")
 while True:
     if palabra == "chupacabra":
@@ -33,6 +33,15 @@ while True:
         palabra= input("Ingrese la palabra secreta para salir del bucle: ")
     
 print("¡Has dejado el bucle con éxito")
+
+
+# SOLUCION N2:
+palabra = ""
+while True:
+    palabra = input("Ingresa la palabra secreta para salir del bucle: ")
+    if palabra == "chupacabra":
+        break
+print("¡Has dejado el bucle con éxito!")
 
 
 
@@ -75,7 +84,7 @@ Emplea la ejecución condicional y la instrucción continue para "comer" las sig
 Asigne las letras no consumidas a la variable word_without_vowels e imprime la variable en la pantalla.
 Analiza el código en el editor. Hemos creado word_without_vowels y le hemos asignado una cadena vacía. Utiliza la operación de concatenación para pedirle a Python que combine las letras seleccionadas en una cadena más larga durante los siguientes giros de bucle, y asignarlo a la variable word_without_vowels. """
 
-
+# SOLUCION N1:
 word_without_vowels = []
 
 # Indicar al usuario que ingrese una palabra
@@ -102,7 +111,35 @@ for letter in user_word:
         word_without_vowels.append(letter)
         continue
 
-    print(letter, end=" ")
+    print(letter, end="")
 # Imprimir la palabra asignada a word_without_vowels.
 print("\n",word_without_vowels)
 
+
+# SOLUCION N2:
+word_without_vowels = ""
+
+# Indicar al usuario que ingrese una palabra
+user_word = input("Ingrese palabra:")
+# y asignarla a la variable user_word.
+user_word = user_word.upper()
+
+
+for letter in user_word:
+    # Completa el cuerpo del bucle.
+    if letter == "A":
+        continue
+    elif letter == "E":
+        continue
+    elif letter == "I":
+        continue
+    elif letter == "O":
+        continue
+    elif letter == "U":
+        continue
+    else:
+        word_without_vowels += letter
+        
+
+# Imprimir la palabra asignada a word_without_vowels.
+print(word_without_vowels)
