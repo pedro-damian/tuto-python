@@ -20,7 +20,7 @@ print(numeros)
 numeros[0] = 111
 print(numeros)
 
-# cambiar de valores entre los ELEMENTOS de una lista
+# copiar el valor del quinto elemento al segundo elemento
 numeros[1] = numeros[4]
 print(numeros)
 
@@ -39,10 +39,10 @@ print(numeros)
 #------------------------------------------------------------------------------------------------------------
 # Los índices negativos
 # los numeros negativos aplicados al llamado de un indice mostaran del ultimo al primero
-print(numeros[-1])
-print(numeros[-2])
-print(numeros[-3])
-print(numeros[-4])
+print(numeros[-1])  # muestra el ultimo valor de la lista 
+print(numeros[-2])  # muestra el penultimo valor de la lista 
+print(numeros[-3])  # muestra el antepenultimo valor de la lista 
+
 
 #------------------------------------------------------------------------------------------------------------
 

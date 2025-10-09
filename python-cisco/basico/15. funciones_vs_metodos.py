@@ -6,12 +6,8 @@
 
 lista = [1,2,3,4,5]
 
-
-# FUNCION
-# result = function(arg)
-
 #------------------------------------------------------------------------------------------------------------
-# METODOS
+# METODOS (sintaxis)
 # result = data.method(arg)
 
 # metodo append() : agrega un nuevo elemento al final de una lista
@@ -25,12 +21,19 @@ print("El metodo insert agrego el numero 20 en el indice 2:", lista)
 #------------------------------------------------------------------------------------------------------------
 # AGREGANDO Numeros del 1 al 5 por medio del BUCLE FOR
 
-my_list = []  # Creando una lista vacía.
+my_list1 = []  # lista vacía.
 
 for i in range(5):
-    my_list.append(i + 1)
+    my_list1.append(i + 1)
 
-print(my_list)
+print(my_list1)  # [1,2,3,4,5]
+
+my_list2 = []  # lista vacía.
+
+for i in range(5):
+    my_list2.insert(0, i + 1)
+
+print(my_list2)  # [5,4,3,2,1]
 
 #------------------------------------------------------------------------------------------------------------
 #SUMAR todos los numeros de una lista con el metodo range
