@@ -1,7 +1,7 @@
 
-from tkinter import *
+from tkinter import *  # importamos la libreria tkinter donde esta todo lo necesario para crear la interfaz grafica * significa todo lo de la libreria
 
-raiz = Tk() # inicio
+raiz = Tk() # inicio de la ventana principal
 
 raiz.title("Frames")
 #raiz.geometry("500x500") # tamaño de la ventana

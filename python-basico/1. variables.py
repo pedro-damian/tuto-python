@@ -18,6 +18,6 @@ print("Aqui cambio mi nombre por ",my_name)
 
 # LA FUNCION INPUT
 my_name=input("¿Cual es tu numbre?: ")
-my_age=input("¿Cual es tu edad?: ")
+my_age = int(input("¿Cual es tu edad?: "))
 print("Tu nombre es",my_name)
 print("Tu edad es",my_age)
